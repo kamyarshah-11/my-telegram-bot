@@ -103,7 +103,7 @@ gasoil_button = KeyboardButton("GASOIL/گازوییل 🚚")
 
 chanle_link_button = InlineKeyboardButton("لینک گروه ما", url="https://abantether.com")
 link_markup = InlineKeyboardMarkup().add(chanle_link_button)
-bot = telebot.TeleBot(BALE_TOKEN)
+bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 Author = """
 👋 About the Author
