@@ -101,7 +101,7 @@ gas_button = KeyboardButton("GAS/گاز طبیعی 🔥")
 gasoline_button = KeyboardButton("RBOB/بنزین 🚗")
 gasoil_button = KeyboardButton("GASOIL/گازوییل 🚚")
 
-chanle_link_button = InlineKeyboardButton("لینک کانال ما 📡", url="https://abantether.com")
+chanle_link_button = InlineKeyboardButton("لینک کانال ما 📡", url="https://t.me/Gheymat_Chand_team")
 link_markup = InlineKeyboardMarkup().add(chanle_link_button)
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
@@ -424,7 +424,7 @@ def handeling_messages(message):
         return
 
     elif text == "لینک کانال ما":
-        bot.send_message(message.chat.id,"لینک کانال ما :",reply_markup=InlineKeyboardMarkup.add(InlineKeyboardButton("قیمت چند؟|Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
+        bot.send_message(message.chat.id,"لینک کانال ما 📡",reply_markup=InlineKeyboardMarkup.add(InlineKeyboardButton("قیمت چند؟|Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
         return
     else:
         bot.send_message(message.chat.id, "درخواست نادرست")
@@ -567,17 +567,17 @@ def commodity_price(name):
 
     for curr in data[category]:
         if curr["symbol"] == name:
-            return f"{curr["name"]} : {curr["price"]} {curr["unit"]}\nمیزان تغییرات : {curr["change_percent"]}\nآخرین اپدیت : {curr["time"]} {curr["date"]}"
+            return f"{curr["name"]} : {curr["price"]} {curr["unit"]}\nمیزان تغییرات : {curr["change_percent"]}💹\nآخرین اپدیت : {curr["time"]} {curr["date"]}"
 
     category = "metal_base"
     for curr in data[category]:
         if curr["symbol"] == name:
-            return f"{curr["name"]} : {curr["price"]} {curr["unit"]}\nمیزان تغییرات : {curr["change_percent"]}\nآخرین اپدیت : {curr["time"]} {curr["date"]}"
+            return f"{curr["name"]} : {curr["price"]} {curr["unit"]}\nمیزان تغییرات : {curr["change_percent"]}💹\nآخرین اپدیت : {curr["time"]} {curr["date"]}"
 
     category = "energy"
     for curr in data[category]:
         if curr["symbol"] == name:
-            return f"{curr["name"]} : {curr["price"]} {curr["unit"]}\nمیزان تغییرات : {curr["change_percent"]}\nآخرین اپدیت : {curr["time"]} {curr["date"]}"
+            return f"{curr["name"]} : {curr["price"]} {curr["unit"]}\nمیزان تغییرات : {curr["change_percent"]}💹\nآخرین اپدیت : {curr["time"]} {curr["date"]}"
 
     return "نام اشتباه است"
 
