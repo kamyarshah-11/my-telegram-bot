@@ -110,13 +110,12 @@ Author = """
 
 I'm Kamyar Shahroudi, a software developer and tech enthusiast. I create projects focused on programming, automation, and networking while continuously learning and experimenting with new technologies.
 
-
 Thanks for using this bot! Your feedback and suggestions are always welcome.
 """
 Author_markup = InlineKeyboardMarkup()
 github_link_btn = InlineKeyboardButton("Git Hub",url="https://github.com/kamyarshah-11/") 
 telegram_link_btn = InlineKeyboardButton("Telegram",url="https://t.me/KamyJooon")
-email_btn = InlineKeyboardButton("Email",url="kshahroudi97@gmail.com")
+email_btn = InlineKeyboardButton("Email",url="mailto:kshahroudi97@gmail.com")
 instagram_link_btn = InlineKeyboardButton("Instagram",url="https://instagram.com/kamyarr166")
 Author_markup.add(github_link_btn,telegram_link_btn)
 Author_markup.add(instagram_link_btn)
