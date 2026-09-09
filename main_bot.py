@@ -428,8 +428,8 @@ def handeling_messages(message):
         commodity_menu(message)
         return
 
-    elif text == "لینک کانال ما":
-        bot.send_message(message.chat.id,"لینک کانال ما 📡",reply_markup=InlineKeyboardMarkup.add(InlineKeyboardButton("قیمت چند؟|Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
+    elif text == "لینک کانال ما 📡":
+        bot.send_message(message.chat.id,"لینک کانال ما 📡",reply_markup=InlineKeyboardMarkup.add(InlineKeyboardButton(text="قیمت چند؟|Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
         return
     else:
         bot.send_message(message.chat.id, "درخواست نادرست")
