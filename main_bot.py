@@ -101,7 +101,7 @@ gas_button = KeyboardButton("GAS/گاز طبیعی 🔥")
 gasoline_button = KeyboardButton("RBOB/بنزین 🚗")
 gasoil_button = KeyboardButton("GASOIL/گازوییل 🚚")
 
-chanle_link_button = InlineKeyboardButton("لینک گروه ما", url="https://abantether.com")
+chanle_link_button = InlineKeyboardButton("لینک کانال ما 📡", url="https://abantether.com")
 link_markup = InlineKeyboardMarkup().add(chanle_link_button)
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
@@ -137,7 +137,7 @@ def start_menu(message):
 
     bot.send_message(
         message.chat.id,
-        "منوی اصلی :\nیکی از گزینه های زیر را انتخاواب کنید",
+        "منوی اصلی :\nیکی از گزینه های زیر را انتخاب کنید 👇",
         reply_markup=markup,
     )
     return
@@ -423,8 +423,12 @@ def handeling_messages(message):
         commodity_menu(message)
         return
 
+    elif text == "لینک کانال ما":
+        bot.send_message(message.chat.id,"لینک کانال ما :",reply_markup=InlineKeyboardMarkup.add(InlineKeyboardButton("قیمت چند؟|Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
+        return
     else:
         bot.send_message(message.chat.id, "درخواست نادرست")
+        return
 
 
 def curr_menu(message):
@@ -517,7 +521,7 @@ def price(symbol):
     for curr in data:
         if curr["symbol"] == symbol:
             try:
-                return f"{curr["name"]} : {int(curr["price"]):,} {curr["unit"]}\n\nآخرین آپدیت : {curr["date"]} {curr["time"]}"
+                return f"{curr["name"]} : {int(curr["price"]):,} {curr["unit"]}\nدرصد تغییرات : {curr["change_percent"]} 💹\nآخرین آپدیت : {curr["date"]} {curr["time"]}"
             except:
                 return "wrong name"
 
@@ -552,7 +556,7 @@ def gold_price(name):
 
     for curr in data:
         if curr["name"] == name:
-            return f"{curr["name"]} : {int(curr["price"]):,} {curr["unit"]}\n{curr["date"]} {curr["time"]}"
+            return f"{curr["name"]} : {int(curr["price"]):,} {curr["unit"]}\nدرصد تغییرات : {curr["change_percent"]} 💹\nآخرین آپدیت : {curr["date"]} {curr["time"]}"
 
 
 def commodity_price(name):
