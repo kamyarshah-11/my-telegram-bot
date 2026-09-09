@@ -127,7 +127,7 @@ Author_markup.add(email_btn)
 
 @bot.message_handler(commands=["author"])
 def Author_info(message):
-    bot.send_message(message.chat.id, Author,reply_markup=Author_markup)
+    bot.send_message(message.chat.id, text=Author,reply_markup=Author_markup)
     return
 
 
