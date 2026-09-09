@@ -121,7 +121,7 @@ Your feedback, ideas, and suggestions are always welcome.
 Author_markup = InlineKeyboardMarkup()
 github_link_btn = InlineKeyboardButton("Git Hub",url="https://github.com/kamyarshah-11/") 
 telegram_link_btn = InlineKeyboardButton("Telegram",url="https://t.me/KamyJooon")
-email_btn = InlineKeyboardButton("Email",url="mailto:kshahroudi97@gmail.com")
+email_btn = InlineKeyboardButton("Email",callback_data="show_email")
 instagram_link_btn = InlineKeyboardButton("Instagram",url="https://instagram.com/kamyarr166")
 Author_markup.add(github_link_btn,telegram_link_btn)
 Author_markup.add(instagram_link_btn)
@@ -137,6 +137,10 @@ def author_info(message):
         Author,
         reply_markup=Author_markup
     )
+
+@bot.callback_query_handler(func= lambda call: call.data == "show_email")
+def show_email(call):
+    bot.send_message(call.message.chat.id,text="author E-mail : `Kshahroudi97@gmail.com`",parse_mode="Markdown")
 
 @bot.message_handler(commands=["start"])
 def start_menu(message):
