@@ -108,10 +108,16 @@ bot = telebot.TeleBot(TELEGRAM_TOKEN)
 Author = """
 👋 About the Author
 
-I'm Kamyar Shahroudi, a software developer and tech enthusiast. I create projects focused on programming, automation, and networking while continuously learning and experimenting with new technologies.
+I'm Kamyar Shahroudi — a software developer & tech enthusiast focused on building things that actually work. ⚙️
 
-Thanks for using this bot! Your feedback and suggestions are always welcome.
+💻 I work on projects around programming, automation, APIs, and networking, while constantly exploring new technologies and improving my skills.
+
+🧠 Build. Experiment. Break. Fix. Repeat.
+
+Thanks for using this bot! 🚀
+Your feedback, ideas, and suggestions are always welcome.
 """
+
 Author_markup = InlineKeyboardMarkup()
 github_link_btn = InlineKeyboardButton("Git Hub",url="https://github.com/kamyarshah-11/") 
 telegram_link_btn = InlineKeyboardButton("Telegram",url="https://t.me/KamyJooon")
@@ -429,7 +435,7 @@ def handeling_messages(message):
         return
 
     elif text == "لینک کانال ما 📡":
-        bot.send_message(message.chat.id,"لینک کانال ما 📡",reply_markup=InlineKeyboardMarkup.add(InlineKeyboardButton(text="قیمت چند؟|Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
+        bot.send_message(message.chat.id,"برای ارتباط با تیم ما در کانال(های) ما عضو شوید 📡✅",reply_markup=InlineKeyboardMarkup().add(InlineKeyboardButton(text="قیمت چند؟ | Gheymat chand?",url="https://t.me/Gheymat_Chand_team")))
         return
     else:
         bot.send_message(message.chat.id, "درخواست نادرست")
@@ -450,7 +456,7 @@ def curr_menu(message):
 
     bot.send_message(
         message.chat.id,
-        "منوی ارز 💵\n\nاز گزینه های زیر یکی را انتخواب کنید",
+        "منوی ارز 💵\n\nاز گزینه های زیر یکی را انتخاب کنید",
         reply_markup=markup,
     )
     return
@@ -472,7 +478,7 @@ def crypto_menu(message):
 
     bot.send_message(
         message.chat.id,
-        "منوی کریپتو :\nاز گزینه های زیر یکی را انتخواب کنید",
+        "منوی کریپتو :\nاز گزینه های زیر یکی را انتخاب کنید",
         reply_markup=markup,
     )
     return
@@ -488,7 +494,7 @@ def gold_menu(message):
     markup.add(start_button)
 
     bot.send_message(
-        message.chat.id, "از بین گزینه های زیر یکی را انتخواب کنید", reply_markup=markup
+        message.chat.id, "از بین گزینه های زیر یکی را انتخاب کنید", reply_markup=markup
     )
     return
 
